@@ -1,0 +1,95 @@
+
+<!DOCUTYPE html>
+<html>
+<head>
+     <title>ToDo List</title>
+<!--=========LINKS=========-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- ========================-->
+    
+    
+<!--=========FONTS LINK=========-->
+<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mogra" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    
+    
+<style>
+    body {
+        background-image: url("http://68.media.tumblr.com/tumblr_m33cchxrWt1ruzojxo1_1280.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    li a:hover {
+        background-color: snow;
+        border-radius: 16px;
+    }
+</style>
+
+</head>
+<body>
+    
+<!--
+       <% var error ; if (error) { %>
+           <div class="alert alert-danger"><%= error %></div>
+       <% } %>
+-->
+    
+<!-- NAVBAR SECTION -->
+    
+    <nav class="navbar navbar" style="background: #1e1818">
+        <div class="container-fluid">
+            <div class="navbar-header"><li>
+                <a class="navbar-brand" href="http://www.kitinfonest.com/" style="color:#eb2226; font-family: 'Philosopher', sans-serif; font-size: 18px; padding-left: 55px;"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a></li>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/register2" style="color:#eb2226; font-family: 'Philosopher', sans-serif; font-size: 18px; padding-right:80px;"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+<!-- ADMIN LOGIN -->
+    
+    <div class="container" style="background: #ede3e1; 
+                                  width:40%;
+                                  margin-top: 115px;
+                                  opacity: 0.8;
+                                  filter: alpha(opacity=80);
+                                  padding-top: 18px;
+                                  padding-bottom: px;">
+        <div class="row">
+           <h1 style="text-align:center; font-family: 'Philosopher', sans-serif; font-size: 40px;">DEVELOPER LOGIN</h1>
+           <div style="width:60%; margin:25px auto; height: 45%; padding-top: 20px;" >
+                <form action="/login2" method="POST" >
+                    <div class="form-group">
+                        <label style="font-family: 'Philosopher', sans-serif; font-size: 20px;">User name:</label>
+                        <input type="text" name="username" placeholder="Username" class="form-control input-lg">
+                    </div>
+
+                    <div class="form-group">
+                        <label style="font-family: 'Philosopher', sans-serif; font-size: 20px;">Password:</label>
+                        <input type="password" name="password" placeholder="Password" class="form-control input-lg">
+                    </div>
+                    
+                    <div style="margin-top: 35px;">
+                        <button type="submit" class="btn btn-md btn-primary pull-right" style="font-family: 'Philosopher', sans-serif; font-size: 19px; background:#eb2226; ">SignIn</button>
+                        <a href="/register2" style="font-family: 'Philosopher', sans-serif; font-size: 19px; font-weight: 900; ">SignUp</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+</html>

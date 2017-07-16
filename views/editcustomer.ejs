@@ -1,0 +1,70 @@
+<DOCTYPE! html>
+<html>
+<head>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+    <style>
+       body  {
+            background-image: url("http://eskipaper.com/images/turquoise-wallpaper-6.jpg");
+    background-repeat: no-repeat;
+     background-size: cover; 
+           color:ghostwhite;
+    font-family:cursive;
+        }
+        h1    {font-family:cursive;}
+    </style>
+    
+<body>
+        
+<div class="container"> 
+     <legend>  <h1 style="text-align:center; color:ghostwhite;" >Edit Customer</h1></legend>
+       
+       
+       <div style="width:30%;margin:25px auto;">
+           <form action="/b/<%=passing._id%>?_method=PUT" method="post">
+    
+               <div class="form-group">
+                     <label>Customer Name</label>
+                   <input class="form-control" type="text" name="edit[customername]"  value="<%=passing.customername%>" required>
+               </div>
+                 
+               <div class="form-group">
+                      <label>Contact Number</label>
+                   <input class="form-control" type="text" name="edit[contactnumber]"  value="<%=passing.contactnumber%>" required>
+               </div> 
+               
+                    
+                 <div class="form-group">
+                       <label>Address</label>
+                <input class="form-control" type="text" name="edit[address]"  value="<%=passing.address%>" required>
+               </div>
+             
+               <div class="form-group">
+                     <label>Selling Price</label>
+                  <input class="form-control" type="text" name="edit[sellingprice]"  value="<%=passing.sellingprice%>" required>
+                </div>
+                  
+               
+               <div class="form-group">
+                     <label>Advance</label>
+                  <input class="form-control" type="text" name="edit[advancee]"  value="<%=passing.advancee%>" required>
+                </div>
+               
+               
+               <div class="form-group">
+                     <label>Balance</label>
+                  <input class="form-control" type="text" name="edit[balancee]"  value="<%=passing.balancee%>" required>
+                </div>
+               
+                <button class="btn btn-lg btn-primary btn-block">submit</button>  
+           </form>
+                  
+                 <a href="/customer" class="btn btn-danger" role="button">Go Back</a>
+       </div>
+       
+   
+</div>
+  
+</body>
+</html>    

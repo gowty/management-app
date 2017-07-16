@@ -1,0 +1,80 @@
+<DOCTYPE! html>
+<html>
+<head>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+    <style>
+       body  {
+           
+            background-image: url("http://eskipaper.com/images/turquoise-wallpaper-6.jpg");
+    background-repeat: no-repeat;
+     background-size: cover; 
+           color:ghostwhite;
+    font-family:cursive;
+        }
+        h1    {font-family:cursive;}
+    </style>
+    
+<body>
+        
+<div class="container"> 
+     <legend>  <h1 style="text-align:center;" >Edit </h1></legend>
+       
+       
+       <div style="width:30%;margin:25px auto;">
+           <form action="/<%=passing._id%>?_method=PUT" method="post">
+    
+               <div class="form-group">
+                     <label>Project Id</label>
+                   <input class="form-control" type="text" name="edit[id]"  value="<%=passing.id%>" required>
+               </div>
+                 
+               <div class="form-group">
+                      <label>Project Name</label>
+                   <input class="form-control" type="text" name="edit[projectname]"  value="<%=passing.projectname%>" required>
+               </div> 
+               
+                    
+                 <div class="form-group">
+                       <label>Assigned To</label>
+                <input class="form-control" type="text" name="edit[assignedto]"  value="<%=passing.assignedto%>" required>
+               </div>
+               
+                 <div class="form-group">
+                       <label>Date</label>
+                <input class="form-control" type="date" name="edit[date]"  value="<%=passing.date%>" required>
+               </div>
+               
+               <div class="form-group">
+                     <label>Due Date</label>
+                <input class="form-control" type="date" name="edit[duedate]"  value="<%=passing.duedate%>" required>
+               </div>
+            
+               <div class="form-group">
+                     <label>Description</label>
+                  <input class="form-control" type="text" name="edit[description]"  value="<%=passing.description%>" required>
+                </div>
+                   
+                    <div class="form-group">
+                        <label>Project Status</label>
+                   <select class="form-control" type="text" name="edit[status]"  value="<%=passing.status%>" required>
+                    <optgroup label="open">
+                  <option> Open</option>
+                  <option>Re-opened</option>
+                  <option>Waiting Assessment</option>
+                    </optgroup>
+                   </select> 
+                    </div>
+               
+                <button class="btn btn-lg btn-primary btn-block">submit</button>  
+           </form>
+                  
+                 <a href="/dashboard" class="btn btn-danger" role="button">Go Back</a>
+       </div>
+       
+   
+</div>
+  
+</body>
+</html>    

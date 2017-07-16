@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+     <style>
+       body  {font-family: "Lato", sans-serif;}
+        h1    {font-family:cursive;}
+    </style>
+<body>
+
+<div class="container">
+        <h1  style="text-align:center;">Search</h1>                                                                                  
+  <div class="table-responsive">          
+  <table class="table" align="center">
+      <% all.forEach(function(all){%>  
+  <tr>
+    <th>Id</th>
+    <td> <%= all.id %> </td>
+  </tr><br>
+  <tr>
+    <th>Project Name</th>
+    <td> <%= all.projectname %> </td>
+  </tr>
+  <tr>
+    <th>Status</th>
+    <td><%= all.status %></td>
+  </tr>
+    <tr>
+    <th>Assigned To</th>
+    <td><%= all.assignedto %></td>
+  </tr>
+    <tr>
+    <th>Date</th>
+    <td><%= all.date %></td>
+  </tr>
+    <tr>
+    <th>Due Date</th>
+    <td><%= all.duedate %> </td>
+  </tr>
+    <tr>
+    <th>Description</th>
+    <td><%= all.description %></td>
+  </tr>
+    <%});%>
+  </table>   
+      
+  </div>
+    
+     <button><a href="/dashboard" style="color:black;"><span class="glyphicon glyphicon-hand-left">GoBack</span></a></button>
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+     <style>
+       body  {
+         background-image: url("http://eskipaper.com/images/turquoise-wallpaper-6.jpg");
+    background-repeat: no-repeat;
+     background-size: cover; 
+           color:ghostwhite;
+    font-family:cursive;
+         }
+        h1    {font-family:cursive;
+         color:tan;
+         }
+    </style>
+    
+<body>
+
+<div class="container">
+    <legend>  <h1 style="text-align:center;" >Payments </h1></legend>
+                                                                                    
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Project name</th>
+        <th>Assigned to</th>
+        <th>Total Payment</th>
+        <th>Advance</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% any.forEach(function(any){%>
+      <tr>
+        <td><%=any.id  %> </td>
+        <td><%=any.projectname  %> </td>
+        <td><%=any.assignedto  %> </td>
+        <td><%=any.totalpayment%> </td>
+        <td><%=any.advance  %> </td>
+          <td><%=any.balance %> </td>
+          <td> <button><a href="/payments/<%= any._id%>" style="color:black;"><span class="glyphicon glyphicon-pencil">Edit</span></a></button>
+             </td> 
+      </tr>
+        <%});%>
+        
+    </tbody>
+  </table>
+  </div>
+    <a href="/dashboard" class="btn btn-danger" role="button">Go Back</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<DOCTYPE! html>
+<html>
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+    <style>
+       body  {
+            background-image: url("http://eskipaper.com/images/turquoise-wallpaper-6.jpg");
+    background-repeat: no-repeat;
+     background-size: cover; 
+           color:ghostwhite;
+    font-family:cursive;
+        }
+        h1    {font-family:cursive;
+        color:cornsilk;
+        }
+    </style>
+    
+<body >
+        
+<div class="container"> 
+     <legend>  <h1 style="text-align:center;" >New Project</h1></legend>
+       
+       
+       <div style="width:30%;margin:25px auto;">
+           <form action="/form" method="post">
+    
+               <div class="form-group">
+                     <label>Project Id</label>
+                   <input class="form-control" type="text" name="id" required>
+               </div>
+                 
+               <div class="form-group">
+                      <label>Project Name</label>
+                   <input class="form-control" type="text" name="projectname" required>
+               </div> 
+               
+                 <div class="form-group">
+                        <label>Status</label>
+                   <select class="form-control" type="text" name="status" required>
+                    <optgroup label="open">
+                  <option> Open</option>
+                  <option>Re-opened</option>
+                  <option>Waiting Assessment</option>
+                    </optgroup>
+                   </select> 
+                    </div>
+               
+                    
+                 <div class="form-group">
+                       <label>Assigned To</label>
+                <input class="form-control" type="text" name="assignedto" required>
+               </div>
+               
+                 <div class="form-group">
+                       <label>Date</label>
+                <input class="form-control" type="date" name="date" required>
+               </div>
+               
+               <div class="form-group">
+                     <label>Due Date</label>
+                <input class="form-control" type="date" name="duedate" required>
+               </div>
+                  
+               <div class="form-group">
+                     <label>Total Payment</label>
+                  <input class="form-control" type="text" name="totalpayment" required>
+                </div>
+               
+               
+               <div class="form-group">
+                     <label>Advance</label>
+                  <input class="form-control" type="text" name="advance" required>
+                </div>
+               
+               
+               <div class="form-group">
+                     <label>Balance</label>
+                  <input class="form-control" type="text" name="balance" required>
+                </div>
+               
+               <div class="form-group">
+                   <label>Description</label>
+                   <textarea class="form-control" name="description" rows="4" required></textarea>
+                </div>
+               
+                 <button class="btn btn-lg btn-primary btn-block">submit</button>  
+           </form>
+            <a href="/dashboard" class="btn btn-danger" role="button">Go Back</a>
+       </div>
+       
+   
+</div>
+  
+</body>
+</html>    

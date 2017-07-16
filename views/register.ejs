@@ -1,0 +1,129 @@
+<!DOCUTYPE html>
+<html>
+<head>
+     <title>ToDo List</title>
+<!--=========LINKS=========-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- ========================-->
+    
+    
+<!--=========FONTS LINK=========-->
+<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mogra" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    
+    
+<style>
+    body {
+        background-image: url("http://68.media.tumblr.com/tumblr_m33cchxrWt1ruzojxo1_1280.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    li a:hover {
+        background-color: snow;
+        border-radius: 16px;
+    }
+</style>
+
+</head>
+<body>
+
+    <% var error ;if (error) { %>
+       <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    
+<!--NAVBAR SECTION--> 
+    
+   <nav class="navbar navbar" style="background: #1e1818">
+        <div class="container-fluid">
+            <div class="navbar-header"><li>
+                <a class="navbar-brand" href="http://www.kitinfonest.com/" style="color:#eb2226; font-family: 'Philosopher', sans-serif; font-size: 18px; padding-left: 55px;"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a></li>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/login" style="color:#eb2226; font-family: 'Philosopher', sans-serif; font-size: 18px; padding-right: 80px;"><span class="glyphicon glyphicon-user" ></span> LogIn</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+<!-- =================== -->
+    
+    
+<!-- ADMIN REGISTER FORM -->
+
+<div class="container" style="background: #ede3e1; 
+                              width:50%;
+                              margin-top: 80px;
+                              margin-bottom: 32px;
+                              opacity: 0.9;
+                              filter: alpha(opacity=90);
+                              padding-top: 18px;">
+    <div class="row">
+        <h1 style=" font-family: 'Philosopher', sans-serif; padding-bottom:20px;text-align:center;">ADMIN REGISTER</h1>
+        <div style="width:60%; margin:25px auto; height:45%; ">
+            <form action="/register" method="POST">
+        
+                <div class="row">          
+                    <div class="form-group col-md-12">
+                        <label style="font-family: 'Philosopher', sans-serif; font-size: 20px;">Name</label>
+                        <input name="name" placeholder="Name" type="text" class="form-control input-lg" required="true" value=""/>
+                        <span class="fa fa-2x form-control-feedback hide"></span>
+                    </div>
+                </div>
+
+                <div class="row">          
+                    <div class="form-group col-md-12">
+                        <label style="font-family: 'Philosopher', sans-serif; font-size: 20px;">Email address</label>
+                        <input name="email" placeholder="Email" type="text" class="form-control input-lg" required="true" value=""/>
+                        <span class="fa fa-2x form-control-feedback hide"></span>
+                    </div>
+                </div>
+
+                <div class="row">    
+                    <div class="form-group col-md-12">
+                        <label style="font-family: 'Philosopher', sans-serif; font-size: 20px;">Phone Number</label>
+                        <input name="phonenumber" placeholder="Phone number" type="text" data-trigger="focus" class="form-control input-lg" required="true" value=""/>
+                        <span class="fa fa-2x form-control-feedback hide icon-display"></span>
+                    </div>                               	                               
+                </div>
+
+                <div class="row">          
+                    <div class="form-group col-md-12">
+                        <label style="font-family: 'Philosopher', sans-serif; font-size: 20px;">User name</label>
+                        <input name="username" placeholder="Username" type="text" class="form-control input-lg" required="true"  value=""/>
+                        <span class="fa fa-2x form-control-feedback hide"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label style="font-family: 'Philosopher', sans-serif; font-size: 20px;">Password</label>
+                        <input name="password" placeholder="Password" type="password" class="form-control input-lg" required="true"  value=""/>
+                        <span class="fa fa-2x form-control-feedback hide "></span>
+                     </div> 
+                 </div>
+
+                <div class="row" style="padding-top: 20px;">
+                    <div class="form-group col-md-3">
+                        <button type="submit" class="btn btn-md btn-primary" style="font-family: 'Philosopher', sans-serif; font-size: 19px; background:#eb2226;">SignUp</button><br><br><br>
+                    </div><br>
+                    <p class="pull-right" style="font-family: 'Philosopher', sans-serif; font-size: 19px; font-weight: 600;">Already have an <a href="/login">account?</a></p>
+                </div>
+            
+            </form>
+        </div>
+    </div>
+    </div>
+    
+<!-- ==================== -->
+    
+    </body>
+</html>

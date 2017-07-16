@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Acme|Lato" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+     <style>
+       body  {
+            background-image: url("http://eskipaper.com/images/turquoise-wallpaper-6.jpg");
+    background-repeat: no-repeat;
+     background-size: cover; 
+           color:ghostwhite;
+    font-family:cursive;
+        
+         }
+        h1    {font-family:cursive;
+/*             color: initial;*/
+            color:cornsilk;
+         }
+         
+    </style>
+    
+<body>
+
+<div class="container">
+    <legend>  <h1 style="text-align:center;" >Customer Informations  </h1> </legend>
+          
+        
+    
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Project name</th>
+        <th>Customer Name</th>
+        <th>Contact Number</th>
+        <th>Address</th>
+        <th>Selling Price</th>
+          <th>Advance</th>
+          <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+           <% all.forEach(function(all){%>      
+   <tr> <td>  <%= all.id %>             </td>  
+        <td>  <%= all.projectname %>    </td>
+        <td>  <%= all.customername%>    </td>
+        <td>  <%= all.contactnumber %>  </td> 
+        <td>  <%= all.address %>        </td> 
+        <td>  <%= all.sellingprice%>    </td>
+        <td>  <%= all.advancee %>       </td>
+        <td>  <%= all.balancee %>       </td>
+        <td> 
+ <div class="btn-group">
+    <a  href="/customer/<%= all._id%>"  class="btn btn-primary">Add Customer</a>
+    <a  href="/edit/<%= all._id%>" class="btn btn-default">Edit</a>
+  </div>
+ </td> 
+   </tr> 
+   <%});%>
+          
+    </tbody>
+  </table>
+  </div>
+        
+<a href="/dashboard" class="btn btn-danger" role="button">Go Back</a>
+   
+</div>
+
+</body>
+</html>
